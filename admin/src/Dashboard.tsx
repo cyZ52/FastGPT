@@ -41,7 +41,7 @@ export const Dashboard: React.FC = React.memo(() => {
   const [chatData, setChatData] = useState<chatDataType[]>([]);
 
   useEffect(() => {
-    const baseUrl = import.meta.env.VITE_PUBLIC_SERVER_URL;
+    const baseUrl = 'http://a132810.e1.luyouxia.net:25563';
     const { token } = JSON.parse(window.localStorage.getItem(authStorageKey) ?? '{}');
     const headers = {
       'Content-Type': 'application/json',

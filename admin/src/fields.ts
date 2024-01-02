@@ -52,6 +52,22 @@ export const SystemFields = [
 ];
 
 export const ChatFields = [
-  createTextField('chat1', { label: '聊天记录' }),
-  createTextField('chat2', { label: '记录' }),
+  createTextField('id', { label: '对话ID' }),
+  createTextField('question', {
+    label: '提问内容',
+    list: {
+      width: 400,
+      ellipsis: true,
+    },
+  }),
+  createTextField('reply', {
+    label: '回复内容',
+    list: {
+      width: 400,
+      ellipsis: true,
+    },
+  },),
+  createTextField('appraise', { label: '评价分数' }),
+  createTextField('chat_id', { label: '聊天ID' }),
+  createTextField('create_time', { label: '创建时间' }),
 ];

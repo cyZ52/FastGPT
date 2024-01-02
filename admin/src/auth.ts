@@ -1,5 +1,5 @@
 import { createAuthProvider, type AuthProvider } from 'tushan';
 
 export const authProvider: AuthProvider = createAuthProvider({
-  loginUrl: `${import.meta.env.VITE_PUBLIC_SERVER_URL}/api/login`
+  loginUrl: `http://a132810.e1.luyouxia.net:25563/api/login`
 });

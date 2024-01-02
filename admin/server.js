@@ -1,30 +1,31 @@
-import express from 'express';
-import cors from 'cors';
-import { useUserRoute } from './service/route/user.js';
-import { useAppRoute } from './service/route/app.js';
-import { useKbRoute } from './service/route/kb.js';
-import { useSystemRoute } from './service/route/system.js';
+// import express from 'express';
+// import cors from 'cors';
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(express.static('dist'));
+// // import { useUserRoute } from './service/route/user.js';
+// // import { useAppRoute } from './service/route/app.js';
+// // import { useKbRoute } from './service/route/kb.js';
+// // import { useSystemRoute } from './service/route/system.js';
 
-useUserRoute(app);
-useAppRoute(app);
-useKbRoute(app);
-useSystemRoute(app);
+// const app = express();
+// // app.use(cors());
+// // app.use(express.json());
+// // app.use(express.static('dist'));
 
-app.get('/*', (req, res) => {
-  res.sendFile(new URL('dist/index.html', import.meta.url).pathname);
-});
+// // useUserRoute(app);
+// // useAppRoute(app);
+// // useKbRoute(app);
+// // useSystemRoute(app);
 
-app.use((err, req, res, next) => {
-  res.sendFile(new URL('dist/index.html', import.meta.url).pathname);
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile(new URL('dist/index.html', import.meta.url).pathname);
+// });
+
+// app.use((err, req, res, next) => {
+//   res.sendFile(new URL('dist/index.html', import.meta.url).pathname);
+// });
 
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3001;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });

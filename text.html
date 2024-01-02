@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="a()">bb</button>
+</body>
+<script>
+    async function a() {
+        console.log('s')
+        const data = await fetch('http://a132810.e1.luyouxia.net:25563/users?_sort=id&_order=DESC&_start=0&_end=20')
+            .then(res => res.json())
+            .then(data => {
+                return data;
+            })
+            .catch(err => console.log(err))
+        console.log(data);
+    }
+
+</script>
+
+</html>
