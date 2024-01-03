@@ -11,7 +11,7 @@ import {
 import { authProvider } from './auth';
 import { userFields, payFields, kbFields, ModelFields, SystemFields, ChatFields } from './fields';
 import { Dashboard } from './Dashboard';
-import { IconUser, IconApps, IconBook, IconStamp } from 'tushan/icon';
+import { IconUser, IconApps, IconBook, IconStamp, IconList } from 'tushan/icon';
 import { i18nZhTranslation } from 'tushan/client/i18n/resources/zh';
 
 const i18n: TushanContextProps['i18n'] = {
@@ -152,6 +152,7 @@ function App() {
         <Resource
           name="users/chatDialog"
           label="聊天记录"
+          icon={<IconList />}
           list={
             <ListTable
               fields={ChatFields}
